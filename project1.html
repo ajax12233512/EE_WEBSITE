@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Pattern Control Using Shift Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Neil Juanillo</h1>
+        <p>Electrical Engineering Student | University of Texas at Dallas</p>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-details">
+        <h2>LED Pattern Control Using Shift Register</h2>
+        <img src="images/register.jpg" alt="Shift Register LED Control">
+        <p>Used Arduino and a 74LS595 shift register to control LED patterns with three pins.</p>
+        <p>
+            <strong>Project Overview:</strong><br>
+            This project involves using shift registers (74LS595) with an Arduino to control the light patterns of eight LEDs. By utilizing only three pins on the Arduino, we could drive the eight LEDs, showcasing an efficient method for expanding digital outputs.
+        </p>
+        <p>
+            <strong>Key Components:</strong><br>
+            - Arduino microcontroller<br>
+            - 74LS595 shift registers<br>
+            - Eight LEDs<br>
+            - Resistors<br>
+            - Breadboard and jumper wires
+        </p>
+        <p>
+            <strong>Key Features:</strong><br>
+            - Efficient use of Arduino pins (only three required)<br>
+            - Dynamic control of multiple LED patterns<br>
+            - Practical implementation of shift registers
+        </p>
+
+        <h3>Arduino Code</h3>
+        
+        <h3>Tinkercad Schematic</h3>
+        <img src="images/register_tinkercad.png" alt="Tinkercad Schematic">
+
+        <pre><code>
+const int OUT_REG_PIN = 10;
+const int SHIFT_REG_PIN = 12;
+const int INPUT_PIN = 11;
+int counter = 0;
+    
+void setup()
+{
+pinMode(OUT_REG_PIN, OUTPUT);
+pinMode(SHIFT_REG_PIN, OUTPUT);
+pinMode(INPUT_PIN, OUTPUT);
+                
+digitalWrite(INPUT_PIN, HIGH);
+}
+    
+void loop()
+{
+counter++;
+                
+/*
+if(counter == 7 ){
+digitalWrite(INPUT_PIN, !digitalRead(INPUT_PIN));
+counter = 0;
+}
+                
+digitalWrite(SHIFT_REG_PIN, HIGH);
+digitalWrite(SHIFT_REG_PIN, LOW);
+digitalWrite(OUT_REG_PIN, HIGH);
+digitalWrite(OUT_REG_PIN, LOW);
+                
+digitalWrite(INPUT_PIN, !digitalRead(INPUT_PIN));
+                
+delay(500);
+}
+        </code></pre>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2023 Neil Juanillo</p>
+    </footer>
+</body>
+</html>
