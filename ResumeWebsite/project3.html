@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Monitoring & Alert System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Neil Juanillo</h1>
+        <p>Electrical Engineering Student | University of Texas at Dallas</p>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-details">
+        <h2>Temperature Monitoring & Alert System</h2>
+        <img src="images/thermistor.jpg" alt="Arduino Temperature Sensor">
+        <p>Designed a thermistor-based temperature system that triggers an LED when exceeding 80°F.</p>
+        <p>
+            <strong>Temperature Reading Circuit with Arduino:</strong><br>
+            We designed a temperature reading circuit using an Arduino to demonstrate practical applications of thermistor-based temperature sensing and digital output control.
+        </p>
+        <p>
+            <strong>Project Overview:</strong><br>
+            This project involves a temperature sensor circuit integrated with an Arduino microcontroller. We utilized a thermistor to measure ambient temperature. The Arduino then processes the analog signal from the thermistor, converts it to Fahrenheit, and displays the temperature reading. If the temperature exceeds 80°F, an LED connected to a digital pin is triggered, indicating a high-temperature alert.
+        </p>
+        <p>
+            <strong>Key Components:</strong><br>
+            - Arduino microcontroller<br>
+            - Thermistor<br>
+            - Resistors<br>
+            - Breadboard and jumper wires<br>
+            - LED
+        </p>
+        <p>
+            <strong>Key Features:</strong><br>
+            - Real-time temperature monitoring<br>
+            - Temperature conversion from Celsius to Fahrenheit<br>
+            - LED alert for temperatures exceeding 80°F
+        </p>
+
+        <h3>Arduino Code</h3>
+        <pre><code>
+            #define sensorPin A0
+            int pin12 = 12;
+            
+            
+            void setup() {
+              // put your setup code here, to run once:
+              pinMode(pin12, OUTPUT);
+              Serial.begin(9600);
+            }
+            
+            
+            void loop() {
+              // put your main code here, to run repeatedly:
+              int reading = analogRead(sensorPin);
+            
+            
+              float voltage = reading * (5.0 / 1024.0);
+            
+            
+              float temperatureC = (voltage - 0.5) * 100;
+            
+            
+              Serial.print("Temperature: ");
+              Serial.print(temperatureC);
+              Serial.print("\xC2\xB0");
+              Serial.print("C | ");
+            
+            
+              float temperatureF = (temperatureC * 9.0 / 5.0) + 32;
+              Serial.print(temperatureF);
+              Serial.print("\xC2\xB0");
+              Serial.print("F");
+            
+            
+              if(temperatureF > 78){
+                digitalWrite(pin12, HIGH);
+              } else if(temperatureF <= 78){
+                digitalWrite(pin12, LOW);
+              }
+             Serial.println("\n");            
+              delay(1000);
+            }
+            
+        </code></pre>
+
+        <h3>Tinkercad Schematic</h3>
+        <img src="images/tinkercad_schematic.jpg" alt="Tinkercad Schematic">
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Neil Juanillo</p>
+    </footer>
+</body>
+</html>
