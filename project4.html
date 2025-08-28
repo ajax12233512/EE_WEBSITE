@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style>/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #333;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Button */
+button {
+    background-color: #1E3A8A;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #3B82F6;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1E40AF;
+    transform: scale(0.95);
+}
+
+button,
+.resume-download {
+    background-color: #1E3A8A;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover,
+.resume-download:hover {
+    background-color: #3B82F6;
+    transform: scale(1.05);
+}
+
+button:active,
+.resume-download:active {
+    background-color: #1E40AF;
+    transform: scale(0.95);
+}
+
+/* Header */
+header {
+    background: #1E3A8A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FACC15;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Project Cards */
+.project {
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    /* Set a fixed height to make the images more square-like */
+    object-fit: cover;
+    /* Ensure the image covers the area without distortion */
+    border-radius: 5px;
+}
+
+/* Project Details */
+#project-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #1A1A2E;
+    color: #f8f8f8;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background: #16213E;
+}
+
+.dark-mode section {
+    background: #222;
+    color: #f8f8f8;
+}
+
+.dark-mode .project {
+    background: #14161f;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}</style>
+        </head>
+        <body>
+            
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual RGB LED Strip Controller</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <header>
+        <h1>Neil Juanillo</h1>
+        <p>Electrical Engineering Student | University of Texas at Dallas</p>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-details">
+        <h2>Manual RGB LED Strip Controller with Switches</h2>
+        <img src="images/rgb_strip.jpg" alt="Manual RGB LED Strip Circuit">
+        <p>Used physical switches and a protoboard to control RGB color output of a 5V LED strip without microcontrollers.</p>
+
+        <p>
+            <strong>Project Overview:</strong><br>
+            This project demonstrates manual control of an RGB LED strip using three toggle switches and no microcontroller. By pulling the red, green, or blue lines to ground through switches, different colors are created by mixing the RGB channels. The LED strip is powered using a 4.5V battery pack soldered directly to a protoboard.
+        </p>
+
+        <p>
+            <strong>Key Components:</strong><br>
+            - 5V RGB LED strip<br>
+            - Three toggle switches<br>
+            - Protoboard<br>
+            - Battery holder (3 × AA 1.5V batteries)<br>
+            - Jumper wires and solder<br>
+            - Velcro and dry-erase calendar for mounting
+        </p>
+
+        <p>
+            <strong>Key Features:</strong><br>
+            - No microcontroller required<br>
+            - Manual RGB color mixing using simple electronics<br>
+            - Clean mounting setup using Velcro and calendar border<br>
+            - Soldered and tested for a reliable, long-term display
+        </p>
+
+        <h3>Build Process</h3>
+        <p>
+            - Soldered three switches onto a protoboard<br>
+            - Connected each switch output to one of the RGB lines of the LED strip<br>
+            - Added a 3xAA battery holder as power supply (4.5V total)<br>
+            - Connected power and ground lines appropriately<br>
+            - Verified LED behavior by toggling switch combinations<br>
+            - Mounted LED strip around dry-erase calendar using tape<br>
+            - Attached battery pack and protoboard using Velcro
+        </p>
+
+        <h3>Project Photos</h3>
+        <img src="images/rgb_strip_mounted.jpg" alt="Mounted RGB LED Project on Calendar">
+    </section>
+
+    <footer>
+        <p>© 2023 Neil Juanillo</p>
+    </footer>
+
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>
